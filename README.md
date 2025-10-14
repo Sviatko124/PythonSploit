@@ -3,9 +3,13 @@ Pythonsploit is a C2 framework created for use in CTFs and other safe environmen
 
 ## Install
 `git clone https://github.com/Sviatko124/PythonSploit`
+
 `cd PythonSploit`
+
 `pip3 install -r requirements.txt`
+
 `python3 psconsole.py`
+
 
 ## Usage
 The PythonSploit console has a `help` menu which lists all commands you can use. 
