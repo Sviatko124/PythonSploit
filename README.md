@@ -15,5 +15,5 @@ chmod +x psconsole.py
 The PythonSploit console has a `help` menu which lists all commands you can use. 
 If you don't want to use the automatically generated payloads from the `gen` command, you can try creating your own reverse shell, but be aware that it might not work. 
 
-# DISCLAIMER
+## DISCLAIMER
 Please use this tool ethically. I do not take any responsibility for how you use this tool. This tool is intended to be primarily used in CTFs. 
