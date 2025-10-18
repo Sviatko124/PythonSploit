@@ -28,7 +28,7 @@ def print_help(command):
 			print("help\t\t\t\t\tDisplay list of command")
 			print("gen\t\t\t\t\tGenerate payload")
 			print("exit\t\t\t\t\tExit the program")
-			print("interact\t\t\t\t\Interact with session")
+			print("interact\t\t\t\tInteract with session")
 			print("Type 'help \\[command]' to see options for each command.")
 
 	else:
